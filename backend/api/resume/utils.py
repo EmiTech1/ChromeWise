@@ -22,7 +22,7 @@ def processor(file):
         if file.content_type == "application/pdf":
          loader = PyPDFLoader(file_path)
         if file.content_type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" or file.content_type == "application/msword":
-         loader = PyPDFLoader(file_path)
+         loader = Docx2txtLoader(file_path)
 
         document = loader.load()
 

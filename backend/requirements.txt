@@ -1,6 +1,8 @@
+docx2txt
 openai
 langchain
 langchain_community
+pypdf
 python-dotenv
 python-multipart
 fastapi

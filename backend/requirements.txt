@@ -1,6 +1,6 @@
 openai
 langchain
-dotenv
+python-dotenv
 fastapi
 uvicorn
 

@@ -36,7 +36,7 @@ async def verify_jwt_token(credentials: HTTPAuthorizationCredentials = Depends(s
         raise HTTPException(status_code=401, detail="Invalid token")
 
 # Include routers
-app.include_router(signup_router,dependencies=[Depends(verify_jwt_token)])
+app.include_router(signup_router)
 app.include_router(login_router)
 app.include_router(resume_router,dependencies=[Depends(verify_jwt_token)])
 app.include_router(generator_router,dependencies=[Depends(verify_jwt_token)])

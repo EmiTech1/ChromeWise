@@ -25,9 +25,9 @@ async def sign_up_route(request: UserSignUpRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+
 login_router = APIRouter()
-
-
 @login_router.post("/Login or Sig_in")
 async def login_route(form_data: OAuth2PasswordRequestForm = Depends()):
     return await login_for_access_token(form_data)
